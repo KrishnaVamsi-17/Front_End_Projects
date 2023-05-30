@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissor</title>
+  </head>
+  <script>
+    let cmpmv = '';
+    function ComputeMove()
+    {
+      let rm = Math.random();
+      if(rm>=0 && rm<1/3) cmpmv = 'rock';
+      else if(rm>=1/3&&rm<2/3) cmpmv = 'paper';
+      else cmpmv = 'scissor';
+    }
+    function result(usermv)
+    {
+      let outcome = '';
+      if(usermv === 'rock')
+      {
+        if(cmpmv === 'rock')
+          outcome = 'Tie';
+        else if(cmpmv === 'paper') outcome = 'You Loose';
+        else outcome = 'You Win';
+      }
+      else if(usermv === 'paper')
+      {
+        if(cmpmv === 'rock')
+          outcome = 'You Win';
+        else if(cmpmv === 'paper') outcome = 'Tie';
+        else outcome = 'You Loose';
+      }
+      else
+      {
+        if(cmpmv === 'rock')
+          outcome = 'You Loose.';
+        else if(cmpmv === 'paper') outcome = 'You Win';
+        else outcome = 'Tie';
+      }
+      alert(`Computer picked ${cmpmv}. You picked ${usermv} . Result is ${outcome}.`);
+    }
+  </script>
+  <body>
+    <h3>Rock Paper Scissor</h3>
+    <button onclick="
+    ComputeMove();
+    result('rock');
+    ">Rock</button>
+    <button onclick="
+    ComputeMove();
+    result('paper');
+    ">Paper</button>
+    <button onclick="
+    ComputeMove();
+    result('Scissor');
+    ">Scissor</button>
+  </body>
+</html>
