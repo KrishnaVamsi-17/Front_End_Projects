@@ -5,7 +5,7 @@
   </head>
   <script>
     let cmpmv = '';
-    let var1 ={
+    let var1 = JSON.parse(localStorage.getItem('var1'))||{
       Win:0,
       Loose:0,
       Tie:0
@@ -69,6 +69,7 @@
           var1.Tie+=1;
           outcome = 'Tie';}
       }
+      localStorage.setItem('var1',JSON.stringify(var1));
       alert(`Computer picked ${cmpmv}. You picked ${usermv} . Result is ${outcome}.\n Win: ${var1.Win}, Loose: ${var1.Loose}, Tie: ${var1.Tie}`);
     }
     function reset()
@@ -76,6 +77,7 @@
       var1.Win=0;
       var1.Loose=0;
       var1.Tie=0;
+      localStorage.removeItem('var1');
     }
   
   </script>
