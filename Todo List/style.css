@@ -1,0 +1,53 @@
+body{
+  font-family:arial;
+}
+.disp,
+.maindiv
+{
+  display:grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap:10px;
+  row-gap:10px;
+  font-family: Arial;
+  align-items: stretch;
+}
+.name{
+  padding:10px;
+  font-size:medium;
+  font-weight: bold;
+}
+.da_te{
+  padding:10px;
+  font-size:large;
+  font-weight:bold;
+  
+}
+.add{
+  padding:10px;
+  width:100px;
+  height:42px;
+  background-color:green;
+  border:none;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.del{
+  padding:10px;
+  width:100px;
+  height:42px;
+  background-color:darkred;
+  border:none;
+  color:white;
+  font-weight:bold;
+}
+.dispname{
+  font-family:Arial;
+  font-size:20px;
+}
+.dispname{
+  font-family:Arial;
+  font-size:large;
+}
+
