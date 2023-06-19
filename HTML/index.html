@@ -17,37 +17,50 @@
     </div>
     <div class="container mt-3">
         
-        <div class="card bg-secondary" style="width:400px; margin:100px">
+        <div class="card bg-white border border-dark" style="width:400px; margin:100px">
             
             <div class="card-body">
                 
                 <div class="row">
                     <div class="col-sm-6">
                         <label class="text-lg text-dark" for="comment">Enter input:</label>
-                        <input class="p-1 border" type="text" placeholder="Enter Input">
+                        <input class="p-1 border ini" type="text" placeholder="Enter Input">
                     </div>
                     <div class="col-sm-4">
                         <div class="dropdown">
-                            <button class="btn btn-sm btn-light dropdown mt-4" data-bs-toggle="dropdown">Units</button>
+                            <button class="btn btn-sm btn-primary dropdown mt-4 inpuin" data-bs-toggle="dropdown">Units</button>
                              <ul class="dropdown-menu">
                                 <li>
                                     <h5 class="dropdown-header">Select units for Entered input</h5>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Centimetre</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Millimetre</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Metres</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Feet</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Inches</a>
-                                </li>
+                            </li>
+                            <button class="dropdown-item" onclick="
+                            add();
+                            cm();
+                            
+                            
+                            ">Centimeter</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" onclick="
+                            add();
+                            mm();">Millimeter</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" onclick="
+                            add();
+                            m();">meters</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" onclick="
+                            add();
+                            feet();">Foot</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" onclick="
+                            add();
+                            inch();">Inches</button>
+                        </li>
                              </ul>
                         </div>
                     </div>
@@ -57,28 +70,28 @@
                 <div class="row mt-4">
                     <div class="col-sm-6">
                         <label class="text-lg text-dark" for="comment">Output:</label>
-                        <input class="p-1 border" type="text" placeholder="Output">
+                        <input id="out" class="p-1 border" type="text" placeholder="Output">
                     </div>
                     <div class="col-sm-4">
                         <div class="dropdown">
-                            <button class="btn  btn-sm btn-light dropdown mt-4" data-bs-toggle="dropdown">Units</button>
+                            <button class="btn  btn-sm btn-primary dropdown mt-4" data-bs-toggle="dropdown">Units</button>
                              <ul class="dropdown-menu">
                                 <li>
                                     <h5 class="dropdown-header">You want your result in</h5>
                                 </li>
-                                    <a class="dropdown-item" href="#">Centimetre</a>
+                                    <button class="dropdown-item" onclick="check('cm');">Centimeter</button>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Millimetre</a>
+                                    <button class="dropdown-item" onclick="check('mm')">Millimeter</button>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Metres</a>
+                                    <button class="dropdown-item" onclick="check('m')">meters</button>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Feet</a>
+                                    <button class="dropdown-item" onclick="check('ft')">Foot</button>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Inches</a>
+                                    <button class="dropdown-item" onclick="check('in')">Inches</button>
                                 </li>
                              </ul>
                         </div>
@@ -94,5 +107,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
